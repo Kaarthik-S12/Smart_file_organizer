@@ -30,7 +30,6 @@ public class AllowedPath {
         this.path = path;
     }
 
-    // Getter and Setter for user
     public User getUser() {
         return user;
     }
