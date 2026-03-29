@@ -4,7 +4,7 @@ import ResultsCards from '../components/ResultsCards'
 import SegregationPanel from '../components/SegregationPanel'
 import { FolderSearch, Sparkles, Shuffle, ChevronRight, CheckCircle2, FolderOpen, Image, FileText, Video, Archive, File } from 'lucide-react'
 
-/* ── Step badge ── */
+
 function Step({ n, label, active, done }) {
     return (
         <div className={`flex items-center gap-2 text-xs font-semibold transition-all ${done ? 'text-emerald-500' : active ? 'text-indigo-600' : 'text-slate-400'}`}>
