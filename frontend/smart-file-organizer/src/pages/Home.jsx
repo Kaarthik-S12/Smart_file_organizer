@@ -19,7 +19,6 @@ function Step({ n, label, active, done }) {
     )
 }
 
-/* ── Animated empty state ── */
 function EmptyState({ loading }) {
     const floatingFiles = [
         { icon: Image, color: '#3b82f6', label: 'photo.jpg', delay: '0s', x: '-60px', y: '-80px' },
