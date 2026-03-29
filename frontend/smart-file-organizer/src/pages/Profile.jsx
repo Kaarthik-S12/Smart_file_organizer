@@ -7,7 +7,6 @@ import {
     FolderOpen, Shield, Sparkles, Star
 } from 'lucide-react'
 
-/* -- Stat chip -- */
 function StatChip({ label, value, color }) {
     return (
         <div style={{ flex: 1, minWidth: 0, padding: '14px 16px', borderRadius: 16, textAlign: 'center', background: `${color}0d`, border: `1px solid ${color}22` }}>
@@ -17,7 +16,6 @@ function StatChip({ label, value, color }) {
     )
 }
 
-/* -- Empty banner -- */
 function EmptyBanner() {
     const tips = [
         { icon: FolderOpen, color: '#6366f1', text: 'Add your name so we can personalize your experience' },
@@ -49,7 +47,6 @@ function EmptyBanner() {
     )
 }
 
-/* -- Field wrapper -- */
 function Field({ label, icon: Icon, children }) {
     return (
         <div>
@@ -68,7 +65,6 @@ const inputStyle = {
     borderRadius: 12, outline: 'none', fontFamily: 'inherit', transition: 'all 0.2s ease',
 }
 
-/* -- File Collection Bot (infinite loop) -- */
 function FileRobot() {
     const [robotX, setRobotX] = useState(3)
     const [facingRight, setFacingRight] = useState(true)
@@ -124,7 +120,7 @@ function FileRobot() {
 
     return (
         <div style={{ marginTop: 20, borderRadius: 20, overflow: 'hidden', background: 'rgba(255,255,255,0.9)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.95)', boxShadow: '0 4px 24px rgba(99,102,241,0.09)' }}>
-            {/* Header */}
+           
             <div style={{ padding: '16px 22px', borderBottom: '1px solid rgba(99,102,241,0.07)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div>
                     <p style={{ fontWeight: 700, fontSize: 14, color: '#1e293b', margin: 0 }}>File Collection Bot</p>
@@ -138,14 +134,13 @@ function FileRobot() {
                 </div>
             </div>
 
-            {/* Stage */}
             <div style={{ padding: '0 22px 22px' }}>
                 <div style={{ position: 'relative', height: 160, marginTop: 8, borderRadius: 16, background: 'linear-gradient(180deg,rgba(238,242,255,0.5) 0%,rgba(245,243,255,0.3) 100%)', border: '1px solid rgba(99,102,241,0.08)', overflow: 'hidden' }}>
 
-                    {/* Ground */}
+                    
                     <div style={{ position: 'absolute', bottom: 28, left: 16, right: 16, height: 2, background: 'linear-gradient(90deg,rgba(99,102,241,0.3),rgba(168,85,247,0.2),rgba(99,102,241,0.3))', borderRadius: 99 }} />
 
-                    {/* Home base */}
+                 
                     <div style={{ position: 'absolute', bottom: 30, left: 14, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 3 }}>
                         <div style={{ width: 32, height: 28, borderRadius: 8, background: collectedIds.length === FILES.length ? 'linear-gradient(135deg,#10b981,#06b6d4)' : 'rgba(99,102,241,0.12)', border: `1.5px solid ${collectedIds.length === FILES.length ? 'transparent' : 'rgba(99,102,241,0.2)'}`, display: 'flex', alignItems: 'center', justifyContent: 'center', transition: 'all 0.5s ease', boxShadow: collectedIds.length === FILES.length ? '0 4px 14px rgba(16,185,129,0.4)' : 'none' }}>
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -162,7 +157,7 @@ function FileRobot() {
                         )}
                     </div>
 
-                    {/* File cards on ground */}
+                  
                     {FILES.map((f) => {
                         const picked = collectedIds.includes(f.id)
                         const beingPicked = activeFileId === f.id
@@ -179,10 +174,10 @@ function FileRobot() {
                         )
                     })}
 
-                    {/* Robot shadow */}
+                    
                     <div style={{ position: 'absolute', bottom: 24, left: `calc(${robotX}% + 10px)`, width: 30, height: 6, borderRadius: '50%', background: 'rgba(99,102,241,0.2)', filter: 'blur(4px)', transition: 'left 0.85s cubic-bezier(0.4,0,0.2,1)' }} />
 
-                    {/* Robot */}
+                    
                     <div style={{ position: 'absolute', bottom: 30, left: `${robotX}%`, transition: 'left 0.85s cubic-bezier(0.4,0,0.2,1)', transform: `scaleX(${facingRight ? 1 : -1})`, zIndex: 5 }}>
                         <svg width="44" height="58" viewBox="0 0 44 58" fill="none">
                             <line x1="22" y1="2" x2="22" y2="9" stroke="#818cf8" strokeWidth="2" strokeLinecap="round" />
@@ -215,7 +210,7 @@ function FileRobot() {
                             </defs>
                         </svg>
 
-                        {/* Files carried above robot */}
+                       
                         {collectedIds.length > 0 && facingRight && (
                             <div style={{ position: 'absolute', bottom: 56, left: '50%', transform: `translateX(-50%) scaleX(${facingRight ? 1 : -1})`, display: 'flex', gap: 3, filter: 'drop-shadow(0 4px 8px rgba(99,102,241,0.3))' }}>
                                 {collectedIds.map(id => {
@@ -320,16 +315,15 @@ export default function Profile() {
 
             <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: 24, alignItems: 'start' }}>
 
-                {/* LEFT — Avatar card */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
                     <div style={{ borderRadius: 24, overflow: 'hidden', background: 'rgba(255,255,255,0.88)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.95)', boxShadow: '0 8px 32px rgba(99,102,241,0.1)' }}>
-                        {/* Cover */}
+                       
                         <div style={{ height: 100, position: 'relative', background: 'linear-gradient(135deg,#4f46e5 0%,#7c3aed 50%,#a855f7 100%)' }}>
                             <div style={{ position: 'absolute', top: -20, right: -20, width: 80, height: 80, borderRadius: '50%', background: 'rgba(255,255,255,0.08)' }} />
                             <div style={{ position: 'absolute', bottom: -10, left: 20, width: 50, height: 50, borderRadius: '50%', background: 'rgba(255,255,255,0.06)' }} />
                         </div>
                         <div style={{ padding: '0 24px 24px' }}>
-                            {/* Avatar */}
+                         
                             <div style={{ display: 'flex', justifyContent: 'center', marginTop: -44, marginBottom: 16 }}>
                                 <div style={{ position: 'relative' }}>
                                     {photoPreview ? (
@@ -374,7 +368,6 @@ export default function Profile() {
                     {isEmpty && <EmptyBanner />}
                 </div>
 
-                {/* RIGHT — Edit form */}
                 <div style={{ borderRadius: 24, overflow: 'hidden', background: 'rgba(255,255,255,0.88)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.95)', boxShadow: '0 8px 32px rgba(99,102,241,0.1)' }}>
                     <div style={{ padding: '20px 28px', display: 'flex', alignItems: 'center', gap: 12, borderBottom: '1px solid rgba(99,102,241,0.07)', background: 'linear-gradient(135deg,rgba(99,102,241,0.03),rgba(168,85,247,0.02))' }}>
                         <div style={{ width: 38, height: 38, borderRadius: 12, flexShrink: 0, background: 'linear-gradient(135deg,rgba(99,102,241,0.12),rgba(168,85,247,0.08))', border: '1px solid rgba(99,102,241,0.18)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -439,7 +432,6 @@ export default function Profile() {
                 </div>
             </div>
 
-            {/* File Bot */}
             <FileRobot />
         </div>
     )
