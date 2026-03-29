@@ -48,7 +48,6 @@ public class ProfileController {
         return profileService.getProfile(userId);
     }
 
-    // Update profile
     @PutMapping
     public Profile update(@RequestBody Profile profile){
 
