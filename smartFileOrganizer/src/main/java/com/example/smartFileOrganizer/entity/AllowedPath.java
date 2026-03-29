@@ -22,7 +22,6 @@ public class AllowedPath {
         this.id = id;
     }
 
-    // Getter and Setter for path
     public String getPath() {
         return path;
     }
