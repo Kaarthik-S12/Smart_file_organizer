@@ -19,7 +19,6 @@ public class ProfileController {
     @Autowired
     private UserRepository userRepository;
 
-    // helper method to get logged-in userId
     private Long getLoggedUserId(){
 
         String email = SecurityContextHolder
@@ -33,7 +32,6 @@ public class ProfileController {
                 .getId();
     }
 
-    // Create profile
     @PostMapping
     public Profile create(@RequestBody Profile profile){
 
@@ -42,7 +40,6 @@ public class ProfileController {
         return profileService.createProfile(userId, profile);
     }
 
-    // Get profile
     @GetMapping
     public Profile get(){
 
