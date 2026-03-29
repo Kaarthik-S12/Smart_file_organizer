@@ -7,7 +7,6 @@ def classify_files(files):
         "archives": 0,
         "others": 0
     }
-
     image_ext = ["jpg","png","jpeg","gif"]
     doc_ext = ["pdf","docx","txt"]
     video_ext = ["mp4","mkv","avi"]
