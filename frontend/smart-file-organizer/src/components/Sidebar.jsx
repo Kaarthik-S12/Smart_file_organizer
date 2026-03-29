@@ -19,7 +19,7 @@ export default function Sidebar({ onClose }) {
 
     return (
         <div className="h-full w-64 bg-[#0f1117] text-white flex flex-col">
-            {/* Logo */}
+           
             <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
                 <div className="flex items-center gap-2.5">
                     <div className="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center">
@@ -35,7 +35,6 @@ export default function Sidebar({ onClose }) {
                 </button>
             </div>
 
-            {/* User badge */}
             <div className="px-4 py-3 mx-3 mt-3 rounded-xl bg-white/5 border border-white/10">
                 <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-full bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center shrink-0">
@@ -50,7 +49,7 @@ export default function Sidebar({ onClose }) {
                 </div>
             </div>
 
-            {/* Nav */}
+         
             <nav className="flex-1 px-3 py-4 space-y-0.5">
                 <p className="text-[10px] font-semibold text-white/30 uppercase tracking-widest px-3 mb-2">Navigation</p>
                 {navItems.map(({ to, label, icon: Icon }) => (
@@ -72,7 +71,6 @@ export default function Sidebar({ onClose }) {
                 ))}
             </nav>
 
-            {/* Logout */}
             <div className="px-3 pb-4 border-t border-white/10 pt-3">
                 <button
                     onClick={handleLogout}
