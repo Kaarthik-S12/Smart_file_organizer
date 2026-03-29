@@ -8,7 +8,7 @@ export default function Layout() {
 
     return (
         <div className="flex min-h-screen bg-slate-50">
-            {/* Mobile overlay */}
+            
             {sidebarOpen && (
                 <div
                     className="fixed inset-0 z-20 bg-black/40 backdrop-blur-sm lg:hidden"
@@ -16,7 +16,7 @@ export default function Layout() {
                 />
             )}
 
-            {/* Sidebar */}
+            
             <aside
                 className={`
           fixed inset-y-0 left-0 z-30 w-64 transform transition-transform duration-300 ease-in-out
@@ -27,9 +27,8 @@ export default function Layout() {
                 <Sidebar onClose={() => setSidebarOpen(false)} />
             </aside>
 
-            {/* Main */}
             <div className="flex-1 flex flex-col min-w-0">
-                {/* Mobile topbar */}
+            
                 <header className="lg:hidden sticky top-0 z-10 bg-white border-b border-slate-200 px-4 h-14 flex items-center gap-3">
                     <button
                         onClick={() => setSidebarOpen(true)}
