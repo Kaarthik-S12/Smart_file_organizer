@@ -72,7 +72,6 @@ export default function Landing() {
                         and moves them to the right place — automatically.
                     </p>
 
-                    {/* Highlights */}
                     <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-10">
                         {highlights.map((h) => (
                             <span key={h} className="flex items-center gap-1.5 text-sm text-slate-500">
@@ -155,7 +154,7 @@ export default function Landing() {
                             </div>
                         </div>
                     </div>
-                    {/* Glow */}
+                   
                     <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-indigo-300/30 blur-2xl rounded-full pointer-events-none" />
                 </div>
             </section>
