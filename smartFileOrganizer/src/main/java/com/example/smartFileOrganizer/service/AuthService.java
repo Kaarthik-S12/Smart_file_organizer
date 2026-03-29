@@ -29,7 +29,6 @@ public class AuthService {
 
         user.setEmail(req.getEmail());
 
-        // encrypt password
         user.setPassword(passwordEncoder.encode(req.getPassword()));
 
         userRepository.save(user);
