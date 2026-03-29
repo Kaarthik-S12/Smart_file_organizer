@@ -11,11 +11,8 @@ class File(BaseModel):
 
 @app.post("/analyze")
 def analyze_files(files: List[File]):
-
     file_list = [file.dict() for file in files]
-
     result = classify_files(file_list)
-
     return {
         "message": "File types analyzed successfully",
         "result": result
