@@ -11,7 +11,6 @@ api.interceptors.request.use((config) => {
     return config
 })
 
-// Auto-logout on 401
 api.interceptors.response.use(
     (res) => res,
     (err) => {
