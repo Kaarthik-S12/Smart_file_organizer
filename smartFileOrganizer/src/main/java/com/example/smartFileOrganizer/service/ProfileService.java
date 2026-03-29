@@ -33,7 +33,6 @@ public class ProfileService {
         Profile profile = profileRepository.findByUserId(userId);
         if (profile == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No profile found");
         return profile;
-        //return profileRepository.findByUserId(userId);
     }
 
     public Profile updateProfile(Long userId, Profile updated){
@@ -42,7 +41,7 @@ public class ProfileService {
         profile.setName(updated.getName());
         profile.setGender(updated.getGender());
         profile.setOccupation(updated.getOccupation());
-        profile.setPhoto(updated.getPhoto());   // ← add this line
+        profile.setPhoto(updated.getPhoto());   
         return profileRepository.save(profile);
     }
 }
