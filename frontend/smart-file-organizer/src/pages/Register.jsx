@@ -28,7 +28,7 @@ export default function Register() {
 
     return (
         <div className="min-h-screen flex">
-            {/* Left panel */}
+         
             <div className="hidden lg:flex lg:w-[45%] bg-[#0f1117] flex-col justify-between p-12 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(99,102,241,0.2),_transparent_60%)] pointer-events-none" />
                 <div className="relative">
@@ -50,7 +50,6 @@ export default function Register() {
                 <p className="relative text-xs text-slate-600">© {new Date().getFullYear()} SmartOrganizer</p>
             </div>
 
-            {/* Right panel */}
             <div className="flex-1 flex items-center justify-center p-6 bg-slate-50">
                 <div className="w-full max-w-sm">
                     <Link to="/" className="flex items-center gap-2 mb-8 lg:hidden">
