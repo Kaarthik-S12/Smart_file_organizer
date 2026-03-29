@@ -30,15 +30,15 @@ function EmptyState({ loading }) {
 
     return (
         <div className="flex flex-col items-center justify-center py-16 px-6 select-none">
-            {/* Animated illustration */}
+            
             <div className="relative w-56 h-56 mb-8">
-                {/* Pulsing rings */}
+                
                 <div className="absolute inset-0 rounded-full animate-ping opacity-10"
                     style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', animationDuration: '2.5s' }} />
                 <div className="absolute inset-4 rounded-full animate-ping opacity-10"
                     style={{ background: 'linear-gradient(135deg, #6366f1, #a855f7)', animationDuration: '2.5s', animationDelay: '0.4s' }} />
 
-                {/* Center folder */}
+                
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-20 h-20 rounded-3xl flex items-center justify-center"
                         style={{
@@ -50,7 +50,7 @@ function EmptyState({ loading }) {
                     </div>
                 </div>
 
-                {/* Orbiting file chips */}
+               
                 {floatingFiles.map(({ icon: Icon, color, label, delay, x, y }) => (
                     <div key={label}
                         className="absolute top-1/2 left-1/2 flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl text-xs font-semibold text-white whitespace-nowrap"
@@ -67,7 +67,7 @@ function EmptyState({ loading }) {
                 ))}
             </div>
 
-            {/* Text */}
+           
             <div className="text-center space-y-2 max-w-sm">
                 <h3 className="text-lg font-bold text-slate-700">
                     {loading ? 'Analyzing your files...' : 'Ready to organize your files?'}
@@ -79,7 +79,7 @@ function EmptyState({ loading }) {
                 </p>
             </div>
 
-            {/* Animated dots when loading */}
+           
             {loading && (
                 <div className="flex items-center gap-2 mt-5">
                     {[0, 1, 2].map(i => (
@@ -93,7 +93,7 @@ function EmptyState({ loading }) {
                 </div>
             )}
 
-            {/* Feature hints */}
+            
             {!loading && (
                 <div className="mt-8 grid grid-cols-3 gap-3 w-full max-w-sm">
                     {[
@@ -110,7 +110,7 @@ function EmptyState({ loading }) {
                 </div>
             )}
 
-            {/* Keyframe styles injected inline */}
+            
             <style>{`
         @keyframes floatCenter {
           0%, 100% { transform: translateY(0px); }
@@ -155,7 +155,6 @@ export default function Home() {
     return (
         <div className="max-w-5xl mx-auto page-enter space-y-6">
 
-            {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-bold text-slate-900">File Organizer</h1>
@@ -171,7 +170,6 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Scan card */}
             <div style={{
                 borderRadius: 24, overflow: 'hidden',
                 background: 'rgba(255,255,255,0.88)',
@@ -179,11 +177,11 @@ export default function Home() {
                 border: '1px solid rgba(255,255,255,0.95)',
                 boxShadow: '0 8px 32px rgba(99,102,241,0.1)',
             }}>
-                {/* Top accent bar */}
+              
                 <div style={{ height: 4, background: 'linear-gradient(90deg, #6366f1, #8b5cf6, #a855f7)' }} />
 
                 <div style={{ padding: '28px 32px 32px' }}>
-                    {/* Card header */}
+                  
                     <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 24 }}>
                         <div style={{
                             width: 46, height: 46, borderRadius: 14, flexShrink: 0,
@@ -199,7 +197,6 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Input — full width of card */}
                     <div style={{ position: 'relative', width: '100%', marginBottom: 20 }}>
                         <FolderSearch style={{
                             position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)',
@@ -232,7 +229,6 @@ export default function Home() {
                         />
                     </div>
 
-                    {/* Button — centered, natural width */}
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <button
                             onClick={handleScan}
@@ -295,7 +291,7 @@ export default function Home() {
             </div>
 
 
-            {/* Empty state — shown only when no results yet */}
+           
             {!analysisResult && (
                 <div className="rounded-3xl overflow-hidden shadow-xl"
                     style={{ background: 'rgba(255,255,255,0.75)', backdropFilter: 'blur(20px)', border: '1px solid rgba(255,255,255,0.9)' }}>
@@ -303,7 +299,7 @@ export default function Home() {
                 </div>
             )}
 
-            {/* Results */}
+          
             {analysisResult && (
                 <div className="space-y-5">
                     <ResultsCards result={analysisResult} />
@@ -320,7 +316,6 @@ export default function Home() {
                 </div>
             )}
 
-            {/* Segregation */}
             {showSegregation && analysisResult && (
                 <SegregationPanel result={analysisResult} scanPath={scanPath} onDone={handleDone} />
             )}
