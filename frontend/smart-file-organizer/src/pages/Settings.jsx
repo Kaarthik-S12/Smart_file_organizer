@@ -64,7 +64,7 @@ export default function Settings() {
                 </div>
 
                 <div className="p-6 space-y-4">
-                    {/* Add input */}
+                   
                     <div className="flex gap-2">
                         <div className="relative flex-1">
                             <FolderOpen className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
@@ -96,7 +96,6 @@ export default function Settings() {
                         </div>
                     )}
 
-                    {/* Paths list */}
                     {paths.length === 0 ? (
                         <div className="flex flex-col items-center justify-center py-12 text-center">
                             <div className="w-12 h-12 bg-slate-100 rounded-2xl flex items-center justify-center mb-3">
