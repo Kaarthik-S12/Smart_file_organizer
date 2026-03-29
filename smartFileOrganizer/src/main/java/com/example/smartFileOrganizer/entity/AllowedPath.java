@@ -14,7 +14,6 @@ public class AllowedPath {
     @ManyToOne
     private User user;
 
-    // Getter and Setter for id
     public Long getId() {
         return id;
     }
