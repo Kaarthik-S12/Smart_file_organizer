@@ -19,7 +19,6 @@ public class SettingsController {
     @Autowired
     private UserRepository userRepository;
 
-    // helper method to get logged-in userId
     private Long getLoggedUserId(){
 
         String email = SecurityContextHolder
