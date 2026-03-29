@@ -26,7 +26,7 @@ export default function Landing() {
     return (
         <div className="min-h-screen bg-white text-slate-900 antialiased">
 
-            {/* ── Navbar ── */}
+            
             <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
@@ -50,9 +50,9 @@ export default function Landing() {
                 </div>
             </header>
 
-            {/* ── Hero ── */}
+           
             <section className="relative overflow-hidden pt-20 pb-28 px-4 sm:px-6">
-                {/* Background */}
+               
                 <div className="absolute inset-0 bg-gradient-to-b from-indigo-50/60 via-white to-white pointer-events-none" />
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-indigo-100/40 rounded-full blur-3xl pointer-events-none" />
 
@@ -98,10 +98,10 @@ export default function Landing() {
                     </div>
                 </div>
 
-                {/* App preview */}
+               
                 <div className="relative max-w-5xl mx-auto mt-16">
                     <div className="rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 border border-slate-200/80 ring-1 ring-slate-900/5">
-                        {/* Browser chrome */}
+                        
                         <div className="bg-slate-100 border-b border-slate-200 px-4 py-3 flex items-center gap-2">
                             <span className="w-3 h-3 rounded-full bg-red-400" />
                             <span className="w-3 h-3 rounded-full bg-yellow-400" />
@@ -112,9 +112,9 @@ export default function Landing() {
                                 </div>
                             </div>
                         </div>
-                        {/* App shell */}
+                        
                         <div className="flex bg-slate-50" style={{ minHeight: 260 }}>
-                            {/* Fake sidebar */}
+                            
                             <div className="w-52 bg-[#0f1117] p-4 space-y-1 shrink-0">
                                 <div className="flex items-center gap-2 mb-4">
                                     <div className="w-6 h-6 bg-indigo-500 rounded-md" />
@@ -160,7 +160,7 @@ export default function Landing() {
                 </div>
             </section>
 
-            {/* ── Features ── */}
+           
             <section id="features" className="py-24 px-4 sm:px-6 bg-white">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-14">
@@ -185,7 +185,7 @@ export default function Landing() {
                 </div>
             </section>
 
-            {/* ── How it works ── */}
+            
             <section id="how" className="py-24 px-4 sm:px-6 bg-slate-50">
                 <div className="max-w-4xl mx-auto">
                     <div className="text-center mb-14">
@@ -207,7 +207,7 @@ export default function Landing() {
                 </div>
             </section>
 
-            {/* ── CTA ── */}
+           
             <section className="py-24 px-4 sm:px-6 bg-indigo-600 relative overflow-hidden">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.1),_transparent_60%)] pointer-events-none" />
                 <div className="relative max-w-2xl mx-auto text-center space-y-5">
@@ -222,7 +222,7 @@ export default function Landing() {
                 </div>
             </section>
 
-            {/* ── Footer ── */}
+           
             <footer className="bg-slate-900 text-slate-400 py-10 px-4 sm:px-6">
                 <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div className="flex items-center gap-2.5">

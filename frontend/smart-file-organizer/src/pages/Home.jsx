@@ -129,7 +129,6 @@ function EmptyState({ loading }) {
     )
 }
 
-/* ── Main page ── */
 export default function Home() {
     const [scanPath, setScanPath] = useState('')
     const [analysisResult, setAnalysisResult] = useState(null)
