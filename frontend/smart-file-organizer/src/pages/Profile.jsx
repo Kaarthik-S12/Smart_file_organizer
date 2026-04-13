@@ -309,7 +309,7 @@ export default function Profile() {
     return (
         <div className="page-enter" style={{ maxWidth: 1100, margin: '0 auto' }}>
             <div style={{ marginBottom: 28 }}>
-                <h1 style={{ fontSize: 22, fontWeight: 800, color: '#0f172a', margin: 0 }}>My Profile</h1>
+                <h1 style={{ fontSize: 22, fontWeight: 800, color: '#0f172a', margin: 0 }}>Profile</h1>
                 <p style={{ fontSize: 13, color: '#94a3b8', marginTop: 4 }}>Manage your personal information and account settings.</p>
             </div>
 
