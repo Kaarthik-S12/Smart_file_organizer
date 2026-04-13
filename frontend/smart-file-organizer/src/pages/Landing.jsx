@@ -126,7 +126,6 @@ export default function Landing() {
                                     </div>
                                 ))}
                             </div>
-                            {/* Fake content */}
                             <div className="flex-1 p-6 space-y-5">
                                 <div>
                                     <div className="h-5 w-48 bg-slate-200 rounded-md mb-1.5" />
