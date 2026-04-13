@@ -155,7 +155,7 @@ export default function SegregationPanel({ result, scanPath, onDone }) {
                     className="w-full flex items-center justify-center gap-2 bg-violet-600 hover:bg-violet-700 disabled:opacity-50 disabled:cursor-not-allowed text-white font-semibold py-3 rounded-xl transition-all duration-200 shadow-sm hover:shadow-md text-sm"
                 >
                     {loading
-                        ? <><Loader className="w-4 h-4 animate-spin" /> Segregating...</>
+                        ? <><Loader className="w-4 h-4 animate-spin" /> Segregating pls wait</>
                         : 'Start Segregation'
                     }
                 </button>
