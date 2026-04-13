@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 from predictor import classify_files
-
+#fastapi helps in getting api
 app = FastAPI()
 
 class File(BaseModel):
