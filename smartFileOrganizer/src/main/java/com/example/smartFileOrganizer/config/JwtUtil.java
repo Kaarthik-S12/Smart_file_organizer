@@ -11,7 +11,7 @@ import java.util.Date;
 public class JwtUtil {
 
     private final Key SECRET = Keys.hmacShaKeyFor(
-            "secretkey123secretkey123secretkey123".getBytes()
+            "myfavouritecoloristhegardennearmycabinofficerandomokayy".getBytes()
     );
 
     public String generateToken(String email) {
